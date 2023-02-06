@@ -9,8 +9,8 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
- 
 }
+
 .main-title {
   font-family: 'Work Sans', sans-serif;
   text-align: center;
@@ -21,7 +21,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: 20px
+  gap: 20px;
 }
 
 .photo-card {
@@ -34,7 +34,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   align-items: center;
   flex-direction: column;
-  height: 600px ;
+  height: 600px;
 }
 
 .photo {
@@ -72,8 +72,6 @@ body {
 
 .likes-counter {
   margin: 0;
-  display: 0;
-
 }
 
 .buttons {
@@ -87,7 +85,6 @@ body {
   font-family: 'Work Sans', sans-serif;
   width: 200px;
   height: 30px;
-  color: bisque;
   font-size: 20px;
   cursor: pointer;
   background-color: antiquewhite;
@@ -98,8 +95,8 @@ body {
 
 .comments-btn:hover {
   background: none;
-  color:bisque;
-  border:1px solid bisque;
+  color: bisque;
+  border: 1px solid bisque;
 }
 
 .reserve-btn {
@@ -108,11 +105,9 @@ body {
   width: 200px;
   border: 1px solid bisque;
   height: 30px;
-  background: none;
-  color:bisque;
+  color: bisque;
   font-size: 20px;
   border-radius: 3px;
-  border:1px solid bisque;
   cursor: pointer;
 }
 
@@ -124,17 +119,17 @@ body {
 
 .photo-author {
   font-size: 25px;
-  font-weight: 500px;
   border-bottom: 1px solid rgb(250, 249, 249);
 }
+
 @media only screen and (max-width: 425px) {
-  
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .cards {
     margin-top: 10px;
     grid-template-columns: 1fr;
@@ -146,13 +141,16 @@ body {
     margin: 0;
     width: 300px;
   }
+
   .photo {
     width: 260px;
   }
+
   .photo-author {
     font-size: 20px;
   }
 }
+
 @media only screen and (width: 768px) {
   main {
     display: flex;
@@ -171,6 +169,7 @@ body {
     margin: 0;
     width: 340px;
   }
+
   .photo {
     width: 300px;
   }
