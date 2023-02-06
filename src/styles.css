@@ -1,3 +1,9 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
   margin: 0;
@@ -15,7 +21,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: 10px
+  gap: 20px
 }
 
 .photo-card {
@@ -28,13 +34,12 @@ body {
   font-family: 'Work Sans', sans-serif;
   align-items: center;
   flex-direction: column;
-  
   height: 600px ;
 }
 
 .photo {
   width: 350px;
- 
+  max-height: 240px;
 }
 
 .img-footer {
@@ -49,7 +54,7 @@ body {
   font-size: 35px;
   cursor: pointer;
   background: none;
-  color: rgb(95, 95, 95);
+  color: rgb(214, 214, 214);
   margin: 0;
   margin-top: 10px;
   padding: 0;
@@ -60,7 +65,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
   padding: 0;
 }
@@ -68,6 +73,7 @@ body {
 .likes-counter {
   margin: 0;
   display: 0;
+
 }
 
 .buttons {
@@ -114,4 +120,58 @@ body {
   background-color: antiquewhite;
   color: grey;
   border: none;
+}
+
+.photo-author {
+  font-size: 25px;
+  font-weight: 500px;
+  border-bottom: 1px solid rgb(250, 249, 249);
+}
+@media only screen and (max-width: 425px) {
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(30, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card {
+    margin: 0;
+    width: 300px;
+  }
+  .photo {
+    width: 260px;
+  }
+  .photo-author {
+    font-size: 20px;
+  }
+}
+@media only screen and (width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(15, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card {
+    margin: 0;
+    width: 340px;
+  }
+  .photo {
+    width: 300px;
+  }
 }
