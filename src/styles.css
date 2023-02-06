@@ -2,10 +2,116 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(225, 225, 225, 0.232);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+ 
 }
 .main-title {
   font-family: 'Work Sans', sans-serif;
   text-align: center;
   font-size: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px
+}
+
+.photo-card {
+  margin-top: 100px;
+  background: radial-gradient(666px at 0.4% 48%, rgba(202, 204, 227, 0.92) 0%, rgba(89, 89, 99, 0.777) 97.5%);
+  color: white;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+  align-items: center;
+  flex-direction: column;
+  
+  height: 600px ;
+}
+
+.photo {
+  width: 350px;
+ 
+}
+
+.img-footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  gap: 40px;
+}
+
+.like-btn {
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  background: none;
+  color: rgb(95, 95, 95);
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.likes-counter {
+  margin: 0;
+  display: 0;
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.comments-btn {
+  font-family: 'Work Sans', sans-serif;
+  width: 200px;
+  height: 30px;
+  color: bisque;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: antiquewhite;
+  color: grey;
+  border: none;
+  border-radius: 3px;
+}
+
+.comments-btn:hover {
+  background: none;
+  color:bisque;
+  border:1px solid bisque;
+}
+
+.reserve-btn {
+  font-family: 'Work Sans', sans-serif;
+  background: none;
+  width: 200px;
+  border: 1px solid bisque;
+  height: 30px;
+  background: none;
+  color:bisque;
+  font-size: 20px;
+  border-radius: 3px;
+  border:1px solid bisque;
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  background-color: antiquewhite;
+  color: grey;
+  border: none;
 }
