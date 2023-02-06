@@ -1,0 +1,11 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(225, 225, 225, 0.232);
+}
+.main-title {
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
