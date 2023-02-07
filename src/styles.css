@@ -41,6 +41,7 @@ body {
 
 .photo {
   width: 350px;
+  min-height: 220px;
   max-height: 240px;
   cursor: pointer;
   border-radius: 10px;
