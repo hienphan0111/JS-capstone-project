@@ -12,12 +12,12 @@ const getImageData = async (id) => {
   return result;
 };
 
-const getComment = async (id) => {
+const getComment = async () => {
   let result;
   try {
     const res = await fetch(url);
     result = await res.json();
-  } catch(e) {
+  } catch (e) {
     throw new Error('Some thing was wrong');
   }
   return result;
