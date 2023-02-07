@@ -108,6 +108,10 @@ body {
   padding: 0;
 }
 
+.like-btn:hover {
+  color: rgba(130, 22, 22, 0.744);
+}
+
 .likes-container {
   display: flex;
   flex-direction: column;
