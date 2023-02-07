@@ -1,46 +1,224 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Handlee&display=swap');
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-  margin: 0 auto;
-  box-sizing: border-box;
-  font-family: 'Dancing Script', cursive;
-  max-width: 1024px;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  border-bottom: 1px solid #000;
-}
-
-nav > ul {
-  display: flex;
-  list-style: none;
-}
-
-.i-menu {
-  margin: 5px 10px;
-}
-
-.i-menu > a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  color: rgb(151, 7, 132);
-  transition: 0.5s;
-}
-
-.i-menu > a:hover {
-  transform: scale(1.1, 1.1);
-  color:rgb(6, 138, 138);
-}
-
-footer {
   margin: 0;
-  padding: 20px;
-  border-top: 1px solid #000;
-  position: absolute;
-  bottom: 5px;
-  width: 1024px;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.main-title {
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 20px;
+}
+
+.photo-card {
+  margin-top: 100px;
+  background: radial-gradient(666px at 0.4% 48%, rgba(202, 204, 227, 0.92) 0%, rgba(89, 89, 99, 0.777) 97.5%);
+  color: white;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+}
+
+.photo {
+  width: 350px;
+  max-height: 240px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.photo:hover {
+  filter: grayscale(80%);
+  border: 1px solid white;
+}
+
+.img-footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  gap: 40px;
+}
+
+.like-btn {
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  background: none;
+  color: rgb(214, 214, 214);
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.likes-counter {
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.comments-btn {
+  font-family: 'Work Sans', sans-serif;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: antiquewhite;
+  color: grey;
+  border: none;
+  border-radius: 3px;
+}
+
+.comments-btn:hover {
+  background: none;
+  color: bisque;
+  border: 1px solid bisque;
+}
+
+.reserve-btn {
+  font-family: 'Work Sans', sans-serif;
+  background: none;
+  width: 200px;
+  border: 1px solid bisque;
+  height: 30px;
+  color: bisque;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  background-color: antiquewhite;
+  color: grey;
+  border: none;
+}
+
+.photo-author {
+  font-size: 25px;
+  border-bottom: 1px solid rgb(250, 249, 249);
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(30, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card {
+    margin: 0;
+    width: 300px;
+  }
+
+  .photo {
+    width: 260px;
+  }
+
+  .photo-author {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(15, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card {
+    margin: 0;
+    width: 340px;
+  }
+
+  .photo {
+    width: 300px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  nav > ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .i-menu {
+    margin: 5px 10px;
+  }
+
+  .i-menu > a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(151, 7, 132);
+    transition: 0.5s;
+  }
+
+  .i-menu > a:hover {
+    transform: scale(1.1, 1.1);
+    color: rgb(6, 138, 138);
+  }
+
+  footer {
+    margin: 0;
+    padding: 20px;
+    border-top: 1px solid #000;
+    position: absolute;
+    bottom: 5px;
+    width: 1024px;
+  }
 }
