@@ -182,7 +182,7 @@ body {
   .photo {
     width: 300px;
   }
-  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -210,7 +210,7 @@ body {
 
   .i-menu > a:hover {
     transform: scale(1.1, 1.1);
-    color:rgb(6, 138, 138);
+    color: rgb(6, 138, 138);
   }
 
   footer {
