@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Handlee&display=swap');
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
+  max-width: 1024px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+.i-menu {
+  margin: 5px 10px;
+}
+
+.i-menu > a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(68, 6, 118);
+  transition: 0.5s;
+}
+
+.i-menu > a:hover {
+  transform: scale(1.1, 1.1);
+  color:rgb(6, 138, 138);
+}
