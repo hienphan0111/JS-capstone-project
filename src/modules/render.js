@@ -1,6 +1,6 @@
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
-function displayPhotos(photos) {
+const displayPhotos = async (photos) => {
   for (let i = 0; i < photos.length; i += 1) {
     cards.innerHTML += `<div class="photo-card">
    <p id="${photos[i].id}">${photos[i].id}</p>
@@ -20,5 +20,5 @@ function displayPhotos(photos) {
    </div>
  </div>`;
   }
-}
+};
 export default displayPhotos;
