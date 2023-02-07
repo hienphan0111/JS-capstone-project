@@ -1,5 +1,10 @@
 import getData from './api.js';
 import showPopup from '../popup_module/renderPopup.js';
+import {
+  addLike,
+getLikes,
+postLike }
+from './apiLikes'
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
 const displayPhotos = async () => {
@@ -13,8 +18,8 @@ const displayPhotos = async () => {
    <div class="img-footer">
      <p class="photo-author">${photos[i].author}</p>
      <div class="likes-container">
-     <button class="like-btn">&#10084;</button>
-     <p class="likes-counter">7 likes</p>
+     <button id="${photos[i].id}" class="like-btn">&#10084;</button>
+     <p id="${photos[i].id}" class="likes-counter-${photos[i].id}">0</p>
      </div>
    </div>
    <div class="buttons">
@@ -24,5 +29,6 @@ const displayPhotos = async () => {
  </div>`;
   }
   showPopup();
+  addLike();
 };
 export default displayPhotos;
