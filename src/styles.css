@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Handlee&display=swap');
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+  font-family: 'Dancing Script', cursive;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+.i-menu {
+  margin: 5px 10px;
+}
+
+.i-menu > a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(151, 7, 132);
+  transition: 0.5s;
+}
+
+.i-menu > a:hover {
+  transform: scale(1.1, 1.1);
+  color: rgb(6, 138, 138);
+}
+
+footer {
+  margin: 50px auto;
+  padding: 20px;
+  border-top: 1px solid #000;
+  bottom: 5px;
+  font-family: 'Dancing Script', cursive;
+  width: 1024px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -181,44 +220,5 @@ body {
 
   .photo {
     width: 300px;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #000;
-    font-family: 'Dancing Script', cursive;
-  }
-
-  nav > ul {
-    display: flex;
-    list-style: none;
-  }
-
-  .i-menu {
-    margin: 5px 10px;
-  }
-
-  .i-menu > a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 18px;
-    color: rgb(151, 7, 132);
-    transition: 0.5s;
-  }
-
-  .i-menu > a:hover {
-    transform: scale(1.1, 1.1);
-    color: rgb(6, 138, 138);
-  }
-
-  footer {
-    margin: 0;
-    padding: 20px;
-    border-top: 1px solid #000;
-    position: absolute;
-    bottom: 5px;
-    width: 1024px;
   }
 }
