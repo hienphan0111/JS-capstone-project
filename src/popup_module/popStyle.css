@@ -1,0 +1,64 @@
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.831);
+  z-index: 2;
+}
+
+.img-pop {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  max-width: 1024px;
+  z-index: 5;
+}
+
+.pop-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #c01414;
+  height: 90%;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  z-index: 7;
+}
+
+.img {
+  max-width: 640px;
+  margin: 10px;
+}
+
+.info > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+.i-info {
+  padding: 10px;
+}
+
+.i-info > a {
+  text-decoration: none;
+  color:#000;
+}
