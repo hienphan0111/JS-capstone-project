@@ -34,7 +34,7 @@ const renderPopup = async (id) => {
   body.insertBefore(imgPop, header);
   body.insertBefore(overlay, header);
   imgPop.classList.remove('hidden');
-  
+
   const closeBtn = document.getElementById(`c-${id}`);
   closeBtn.addEventListener('click', () => {
     imgPop.classList.add('hidden');

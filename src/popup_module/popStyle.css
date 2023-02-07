@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   width: 90%;
-  over-flow: scroll;
+  overflow: scroll;
   max-width: 1024px;
   z-index: 5;
 }

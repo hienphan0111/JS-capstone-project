@@ -14,7 +14,7 @@ const getImageData = async (id) => {
 const getComment = async () => {
   let result;
   try {
-    const res = await fetch(url);
+    const data = await getData();
     result = await res.json();
   } catch (e) {
     throw new Error('Some thing was wrong');
