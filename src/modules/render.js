@@ -12,7 +12,9 @@ const displayPhotos = async () => {
    <div class="img-footer">
      <p class="photo-author">${photos[i].author}</p>
      <div class="likes-container">
-     <button class="like-btn">&#10084;</button>
+     <button class="like-btn">
+     <i class="fa-regular fa-heart"></i>
+     </button>
      <p class="likes-counter">7 likes</p>
      </div>
    </div>

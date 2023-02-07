@@ -69,6 +69,10 @@ body {
   padding: 0;
 }
 
+.like-btn:hover {
+  color: rgb(89, 9, 9);
+}
+
 .likes-container {
   display: flex;
   flex-direction: column;
