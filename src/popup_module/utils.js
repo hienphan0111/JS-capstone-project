@@ -1,10 +1,9 @@
-const url = 'https://picsum.photos/v2/list';
+import getData from '../modules/api.js';
 
 const getImageData = async (id) => {
   let result;
   try {
-    const res = await fetch(url);
-    const data = await res.json();
+    const data = await getData();
     result = data.find((item) => item.id === id.toString());
   } catch (e) {
     throw new Error('Some thing was wrong');

@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   width: 90%;
-  height: 90%;
+  over-flow: scroll;
   max-width: 1024px;
   z-index: 5;
 }
@@ -31,7 +31,6 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid #c01414;
-  height: 90%;
 }
 
 .close {
@@ -44,7 +43,7 @@
 }
 
 .img > img {
-  max-width: 640px;
+  max-width: 480px;
   margin: 10px;
 }
 

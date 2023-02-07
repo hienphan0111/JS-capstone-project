@@ -1,4 +1,5 @@
 import getData from './api.js';
+import showPopup from '../popup_module/renderPopup.js';
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
 const displayPhotos = async () => {
@@ -22,5 +23,6 @@ const displayPhotos = async () => {
    </div>
  </div>`;
   }
+  showPopup();
 };
 export default displayPhotos;

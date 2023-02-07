@@ -8,7 +8,7 @@ const renderPopup = async (id) => {
   } = image;
   const container = `
     <div class="pop-in">
-      <i class="fa-solid fa-x close"></i>
+      <i class="fa-solid fa-x close" id="c-${id}"></i>
       <div class="img">
         <img src="${image.download_url}" alt="Image">
       </div>
@@ -33,6 +33,22 @@ const renderPopup = async (id) => {
 
   body.insertBefore(imgPop, header);
   body.insertBefore(overlay, header);
+  imgPop.classList.remove('hidden');
+  
+  const closeBtn = document.getElementById(`c-${id}`);
+  closeBtn.addEventListener('click', () => {
+    imgPop.classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
 };
 
-export default renderPopup;
+const showPopup = () => {
+  const commentBtn = document.querySelectorAll('.comments-btn');
+  commentBtn.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      renderPopup(index);
+    });
+  });
+};
+
+export default showPopup;
