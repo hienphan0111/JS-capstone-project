@@ -3,8 +3,8 @@ import './popStyle.css';
 
 const renderPopup = async (id) => {
   const image = await getImageData(id);
-  const { 
-    author, width, height, url
+  const {
+    author, width, height, url,
   } = image;
   const container = `
     <div class="pop-in">

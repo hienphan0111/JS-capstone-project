@@ -13,7 +13,14 @@ const getImageData = async (id) => {
 };
 
 const getComment = async (id) => {
-  return id;
+  let result;
+  try {
+    const res = await fetch(url);
+    result = await res.json();
+  } catch(e) {
+    throw new Error('Some thing was wrong');
+  }
+  return result;
 };
 
 export { getImageData, getComment };
