@@ -1,6 +1,8 @@
+import getData from './api.js';
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
-const displayPhotos = async (photos) => {
+const displayPhotos = async () => {
+  const photos = await getData();
   for (let i = 0; i < photos.length; i += 1) {
     cards.innerHTML += `<div class="photo-card">
    <p id="${photos[i].id}">${photos[i].id}</p>

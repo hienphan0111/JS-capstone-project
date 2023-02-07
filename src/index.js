@@ -1,3 +1,6 @@
 import './styles.css';
 import './modules/api.js';
-import './modules/displayLikes';
+
+import displayPhotos from './modules/render.js';
+
+document.addEventListener('DOMContentLoaded', displayPhotos);
