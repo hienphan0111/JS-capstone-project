@@ -1,4 +1,4 @@
-import { getImageData } from './utils.js';
+import getImageData from './utils.js';
 import './popStyle.css';
 
 const renderPopup = async (id) => {

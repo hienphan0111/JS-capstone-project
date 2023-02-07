@@ -11,4 +11,4 @@ const getImageData = async (id) => {
   return result;
 };
 
-export { getImageData, getComment };
+export default getImageData;
