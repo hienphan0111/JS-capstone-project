@@ -23,48 +23,26 @@ const createApp = () => {
     });
 };
 
-
-const appId = 'iDR6FK5eZz5q30WcT2AB'
+const appId = '01g8zOGHAMdlxh7XvGhS'
 const urlLikesId = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes/`
 
-
-// const fetchLikes = async () => {
-//   const data = await fetch(`${urlLikesId}`).then((response) => response.json());
-//   console.log(data);
-// };
-
-// // fetchLikes();
-// const likesGet = () => {
- 
-//   fetch(urlLikesId, { method: 'GET' })
-//     .then((res) => res.json())
-//     .then((data) => {
-//       return data;
-//     });
-// };
-// const data = await likesGet()
-// console.log(data)
-
-const getLikes = () => {
-  fetch(urlLikesId, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then(response => {
-      console.log(response)
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      console.log(response.text());
-    })
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error(error);
-    });
+const likesGet = async () => {
+  const data = await fetch(`${urlLikesId}`).then((response) => response.json());
+  return data;
 };
 
-getLikes();
+
+const likesCounter = document.querySelector('.likes-counter');
+// likesCounter.forEach(e=> console.log(e))
+
+// const displayLikes = (data) => {
+// likesCounter.forEach((e,i) => {
+ 
+//   const nlike = data.find((likes)=>likes.item_id === (i + 1));
+//   if (nlike) {
+//     likesCounter[i].textContent = nlike.likes;
+//   }
+// })
+// }
+ 
+export default likesGet;
