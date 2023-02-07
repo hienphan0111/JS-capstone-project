@@ -3,12 +3,14 @@ import './popStyle.css';
 
 const renderPopup = async (id) => {
   const image = await getImageData(id);
-  const { author, width, height, url, download_url } = image;
+  const { 
+    author, width, height, url
+  } = image;
   const container = `
     <div class="pop-in">
       <i class="fa-solid fa-x close"></i>
       <div class="img">
-        <img src="${url}" alt="Image">
+        <img src="${image.download_url}" alt="Image">
       </div>
       <h3 class="img-title">${author}</h3>
       <div class="info">
@@ -16,10 +18,9 @@ const renderPopup = async (id) => {
           <li class="i-info">Width: ${width}</li>
           <li class="i-info">Height: ${height}</li>
           <li class="i-info"><a href="${url}"> Click here </a> view</li>
-          <li class="i-info"><a href="${download_url}">Click here</a> to download</li>
+          <li class="i-info"><a href="${image.download_url}">Click here</a> to download</li>
         </ul>
       </div>
-    
     `;
   const imgPop = document.createElement('div');
   const overlay = document.createElement('div');
@@ -32,6 +33,6 @@ const renderPopup = async (id) => {
 
   body.insertBefore(imgPop, header);
   body.insertBefore(overlay, header);
-}
+};
 
 export default renderPopup;

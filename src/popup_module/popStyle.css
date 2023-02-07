@@ -43,7 +43,7 @@
   z-index: 7;
 }
 
-.img {
+.img > img {
   max-width: 640px;
   margin: 10px;
 }
@@ -60,5 +60,5 @@
 
 .i-info > a {
   text-decoration: none;
-  color:#000;
+  color: #000;
 }
