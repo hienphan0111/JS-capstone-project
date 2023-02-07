@@ -11,15 +11,4 @@ const getImageData = async (id) => {
   return result;
 };
 
-const getComment = async () => {
-  let result;
-  try {
-    const data = await getData();
-    result = await res.json();
-  } catch (e) {
-    throw new Error('Some thing was wrong');
-  }
-  return result;
-};
-
 export { getImageData, getComment };
