@@ -3,17 +3,15 @@
 */
 import countItems  from '../src/modules/counter.js';
 
-describe('countItems', () => {
-  let cards;
+describe('Test for elements counter', () => {
+  it('should return the number of photo-card elements on the page', () => {
+    document.body.innerHTML = `
+      <div class="photo-card"></div>
+      <div class="photo-card"></div>
+      <div class="photo-card"></div>
+    `;
 
-  beforeEach(() => {
-    cards = [{}, {}, {}];
-    document.querySelectorAll = jest.fn(() => cards);
-  });
-
-  it('counts the number of photo-card elements', () => {
-    const updateCounter = jest.fn();
-    countItems();
-    expect(updateCounter).toHaveBeenCalledWith(3);
+    const cards= countItems();
+    expect(cards).toEqual(3);
   });
 });
