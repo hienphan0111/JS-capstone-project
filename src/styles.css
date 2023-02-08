@@ -97,7 +97,7 @@ body {
   gap: 40px;
 }
 
-.like-btn {
+.like-btn-container {
   border: none;
   font-size: 35px;
   cursor: pointer;
