@@ -1,5 +1,5 @@
 const counterTxt = document.querySelector('.photographies-n');
-const photoTxt = document.querySelector('.photographies-txt')
+const photoTxt = document.querySelector('.photographies-txt');
 const countItems = () => {
   let counter = 0;
   const cards = document.querySelectorAll('.photo-card');
