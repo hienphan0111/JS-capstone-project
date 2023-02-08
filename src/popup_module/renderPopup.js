@@ -2,9 +2,38 @@ import getImageData from './utils.js';
 import './popStyle.css';
 import { getComments, postComment } from './apiComment.js';
 
+const updateComment = async (id) => {
+  const comments = await getComments(id);
+  const commentHeader = document.getElementById(`cm-h-${id}`);
+  commentHeader.innerText = `Comment (${comments.length})`;
+  const listCom = document.getElementById(`comments-${id}`);
+  listCom.innerHTML = '';
+  comments.forEach((comment) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+    listCom.append(li);
+  });
+};
+
+function addComment(id) {
+  const btnComment = document.getElementById(`btn-${id}`);
+  const username = document.getElementById(`name-${id}`);
+  const comment = document.getElementById(`cm-${id}`);
+
+  btnComment.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const item = {
+      item_id: id,
+      username: username.value,
+      comment: comment.value,
+    };
+    await postComment(item);
+    updateComment(id);
+  });
+}
+
 const renderPopup = async (id) => {
   const image = await getImageData(id);
-  
   const {
     author, width, height, url,
   } = image;
@@ -61,36 +90,6 @@ const renderPopup = async (id) => {
   updateComment(id);
   addComment(id);
 };
-
-const updateComment = async (id) => {
-  const comments = await getComments(id);
-  const commentHeader = document.getElementById(`cm-h-${id}`);
-  commentHeader.innerText = `Comment (${comments.length})`;
-  const listCom = document.getElementById(`comments-${id}`);
-  listCom.innerHTML = '';
-  comments.forEach((comment) => {
-    const li = document.createElement('li');
-    li.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-    listCom.append(li);
-  });
-};
-
-function addComment(id) {
-  const btnComment = document.getElementById(`btn-${id}`);
-  const username = document.getElementById(`name-${id}`);
-  const comment = document.getElementById(`cm-${id}`);
-
-  btnComment.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const item = {
-      item_id: id,
-      username: username.value,
-      comment: comment.value,
-    };
-    await postComment(item);
-    updateComment(id);
-  });
-}
 
 const showPopup = () => {
   const commentBtn = document.querySelectorAll('.comments-btn');
