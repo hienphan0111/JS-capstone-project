@@ -2,7 +2,7 @@ const appId = 'CADKJQ2LFa6qH5nunRws';
 
 const getComments = async (id) => {
   const urlInvComments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${id}`;
-  
+
   const res = await fetch(urlInvComments);
   const result = await res.json();
   return result;
@@ -10,7 +10,7 @@ const getComments = async (id) => {
 
 async function postComment(comment) {
   const urlInvPost = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments/`;
-  
+
   try {
     const response = await fetch(urlInvPost, {
       method: 'POST',

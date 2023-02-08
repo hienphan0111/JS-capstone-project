@@ -3,7 +3,6 @@ import './popStyle.css';
 import { getComments } from './apiComment.js';
 
 const renderPopup = async (id) => {
-
   const image = await getImageData(id);
   const comments = await getComments(id);
   const {
@@ -31,7 +30,7 @@ const renderPopup = async (id) => {
       </div>
     </div>
     `;
-  
+
   const imgPop = document.createElement('div');
   const overlay = document.createElement('div');
   imgPop.classList.add('img-pop');
