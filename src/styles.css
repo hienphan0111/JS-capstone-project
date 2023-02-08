@@ -97,7 +97,7 @@ body {
   gap: 40px;
 }
 
-.like-btn {
+.like-btn-container {
   border: none;
   font-size: 35px;
   cursor: pointer;
@@ -106,6 +106,10 @@ body {
   margin: 0;
   margin-top: 10px;
   padding: 0;
+}
+
+.like-btn:hover {
+  color: rgba(130, 22, 22, 0.744);
 }
 
 .likes-container {
