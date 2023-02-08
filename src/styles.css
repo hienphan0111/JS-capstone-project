@@ -59,7 +59,7 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -191,7 +191,7 @@ body {
   padding: 0;
 }
 
-@media only screen and (min-width: 700px ) {
+@media only screen and (min-width: 700px) {
   .cards {
     margin-top: 50px;
     display: grid;
@@ -199,49 +199,56 @@ body {
     grid-template-rows: repeat(15, 1fr);
     gap: 10px;
   }
+
   .photo-card {
     margin: 0;
     width: 300px;
   }
-  .photo {
-    width: 280px;
-  }
- .img-footer {
-  font-size: 20px;
- }
- @media only screen and (min-width: 1000px)  {
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(15, 1fr);
-    gap: 10px;
-  }
-
-  .photo-card {
-    width: 300px;
-  }
 
   .photo {
     width: 280px;
   }
-  .photo-author {
+
+  .img-footer {
     font-size: 20px;
   }
-}
-@media only screen and (min-width: 1400px)  {
-  .cards {
-    margin-top: 100px;
-    gap: 30px;
-  }
-  .photo-card {
-    width: 340px;
+
+  @media only screen and (min-width: 1000px) {
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(15, 1fr);
+      gap: 10px;
+    }
+
+    .photo-card {
+      width: 300px;
+    }
+
+    .photo {
+      width: 280px;
+    }
+
+    .photo-author {
+      font-size: 20px;
+    }
   }
 
-  .photo {
-    width: 300px;
+  @media only screen and (min-width: 1400px) {
+    .cards {
+      margin-top: 100px;
+      gap: 30px;
+    }
+
+    .photo-card {
+      width: 340px;
+    }
+
+    .photo {
+      width: 300px;
+    }
+
+    .photo-author {
+      font-size: 25px;
+    }
   }
-  .photo-author {
-    font-size: 25px;
-  }
-}
 }
