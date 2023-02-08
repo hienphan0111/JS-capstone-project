@@ -1,8 +1,10 @@
 import getImageData from './utils.js';
 import './popStyle.css';
+import { getComments } from './apiComment.js';
 
 const renderPopup = async (id) => {
   const image = await getImageData(id);
+  const comments = await getComments(id);
   const {
     author, width, height, url,
   } = image;
@@ -21,7 +23,14 @@ const renderPopup = async (id) => {
           <li class="i-info"><a href="${image.download_url}">Click here</a> to download</li>
         </ul>
       </div>
+      <div class="comments">
+        <h3>Comments (${comments.length})</h3>
+        <ul class="list-comment" id="comments-${id}">
+        </ul>
+      </div>
+    </div>
     `;
+
   const imgPop = document.createElement('div');
   const overlay = document.createElement('div');
   imgPop.classList.add('img-pop');
@@ -39,6 +48,13 @@ const renderPopup = async (id) => {
   closeBtn.addEventListener('click', () => {
     imgPop.classList.add('hidden');
     overlay.classList.add('hidden');
+  });
+
+  const listCom = document.getElementById(`comments-${id}`);
+  comments.forEach((comment) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${comment.creation_date} ${comment.username} ${comment.comment}`;
+    listCom.append(li);
   });
 };
 
