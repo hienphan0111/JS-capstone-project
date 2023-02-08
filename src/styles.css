@@ -36,7 +36,6 @@ footer {
   border-top: 1px solid #000;
   bottom: 5px;
   font-family: 'Dancing Script', cursive;
-  width: 1024px;
 }
 
 main {
@@ -60,8 +59,7 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -80,7 +78,7 @@ body {
 
 .photo {
   width: 350px;
-  max-height: 240px;
+  height: 200px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -97,7 +95,7 @@ body {
   gap: 40px;
 }
 
-.like-btn {
+.like-btn-container {
   border: none;
   font-size: 35px;
   cursor: pointer;
@@ -174,44 +172,36 @@ body {
   border-bottom: 1px solid rgb(250, 249, 249);
 }
 
-@media only screen and (max-width: 425px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cards {
-    margin-top: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(30, 1fr);
-    gap: 10px;
-  }
-
-  .photo-card {
-    margin: 0;
-    width: 300px;
-  }
-
-  .photo {
-    width: 260px;
-  }
-
-  .photo-author {
-    font-size: 20px;
-  }
+.counter-container {
+  width: 200px;
+  height: 60px;
+  border: 0.5px solid rgb(161, 161, 161);
+  display: flex;
+  gap: 5px;
+  font-family: 'Work Sans', sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #c3cfe26a;
 }
 
-@media only screen and (width: 768px) {
-  main {
+.photographies-txt {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .title-container {
+    margin-top: 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 100px;
     align-items: center;
   }
 
   .cards {
+    margin-top: 50px;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(15, 1fr);
     gap: 10px;
@@ -219,10 +209,57 @@ body {
 
   .photo-card {
     margin: 0;
-    width: 340px;
+    width: 300px;
   }
 
   .photo {
-    width: 300px;
+    width: 280px;
+  }
+
+  .img-footer {
+    font-size: 20px;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(15, 1fr);
+      gap: 10px;
+    }
+
+    .photo-card {
+      width: 300px;
+    }
+
+    .photo {
+      width: 280px;
+    }
+
+    .photo-author {
+      font-size: 20px;
+    }
+    .main-title {
+
+      font-size: 80px;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .cards {
+      margin-top: 100px;
+      gap: 30px;
+    }
+
+    .photo-card {
+      width: 340px;
+    }
+
+    .photo {
+      width: 300px;
+    }
+
+    .photo-author {
+      font-size: 25px;
+    }
   }
 }
