@@ -5,6 +5,8 @@ import {
   getLikes,
 }
 from './apiLikes.js';
+
+import updateCounter from './updatecounter.js';
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
 const displayPhotos = async () => {
@@ -24,19 +26,19 @@ const displayPhotos = async () => {
    <div class="img-footer">
      <p class="photo-author">${photos[i].author}</p>
      <div class="likes-container">
-     <button id="${photos[i].id}" class="like-btn">
-     <i class="fa-regular fa-heart"></i>
+     <button class="like-btn-container">
+     <i class="fa-regular fa-heart like-btn" id="${photos[i].id}"></i>
      </button>
      <p id="${photos[i].id}" class="likes-counter-${photos[i].id}">${likesCounter}</p>
      </div>
    </div>
    <div class="buttons">
      <button class="card-btn comments-btn">Comments</button>
-     <button class="card-btn reserve-btn">Reserve</button>
    </div>
  </div>`;
   }
   showPopup();
   addLike();
+  updateCounter();
 };
 export default displayPhotos;
