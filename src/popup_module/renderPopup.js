@@ -1,6 +1,7 @@
 import getImageData from './utils.js';
 import './popStyle.css';
 import { getComments, postComment } from './apiComment.js';
+import commentCounter from './commentCounter.js';
 
 /* Update all comments which get from API on popup window */
 
@@ -17,6 +18,10 @@ const updateComment = async (id) => {
     li.className = 'comment-item';
     listCom.append(li);
   });
+
+  const commentItem = listCom.childNodes;
+  const count = commentCounter(commentItem);
+  commentHeader.innerText = `Comment (${count})`;
 };
 // Show a message with a type of input
 
