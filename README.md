@@ -34,13 +34,16 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 [PHOTO GALLERY] <a name="about-project"></a>
 
-The leaderboard website displays scores submitted by different players. It also allows you to submit your score
+Photo Gallery is a simple app that shows the photographies requested from the API https://picsum.photos. This project is the finall Capstone Project from The JavaScript module from Microverse program's curriculum and has being done as a group Project by Andrea Rivas and Hien Phan.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
+
+<a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="55" height="55"/></a><a href="https://www.w3schools.com/css/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="55" height="55"/></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="55" height="55"/></a>
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
