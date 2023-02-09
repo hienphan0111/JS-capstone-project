@@ -6,7 +6,7 @@ import {
 }
 from './apiLikes.js';
 
-import { updateCounter } from './counter.js';
+import updateCounter from './updatecounter.js';
 // -- function that renders the information coming from the API.
 const cards = document.querySelector('.cards');
 const displayPhotos = async () => {
