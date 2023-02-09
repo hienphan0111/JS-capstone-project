@@ -13,11 +13,11 @@ const updateComment = async (id) => {
   comments.forEach((comment) => {
     const li = document.createElement('li');
     li.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+
     li.className = 'comment-item';
     listCom.append(li);
   });
 };
-
 // Show a message with a type of input
 
 const showMessage = (input, message, type) => {

@@ -68,17 +68,17 @@ body {
   background: radial-gradient(666px at 0.4% 48%, rgba(202, 204, 227, 0.92) 0%, rgba(89, 89, 99, 0.777) 97.5%);
   color: white;
   border-radius: 10px;
-  width: 400px;
+  width: 300px;
   display: flex;
   font-family: 'Work Sans', sans-serif;
   align-items: center;
   flex-direction: column;
-  height: 600px;
+  height: 500px;
 }
 
 .photo {
-  width: 350px;
-  max-height: 240px;
+  width: 280px;
+  height: 200px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -125,7 +125,7 @@ body {
 }
 
 .buttons {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -169,7 +169,6 @@ body {
 
 .photo-author {
   font-size: 25px;
-  border-bottom: 1px solid rgb(250, 249, 249);
 }
 
 .counter-container {
@@ -192,6 +191,13 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
+  .title-container {
+    margin-top: 60px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+  }
+
   .cards {
     margin-top: 50px;
     display: grid;
@@ -230,6 +236,10 @@ body {
 
     .photo-author {
       font-size: 20px;
+    }
+
+    .main-title {
+      font-size: 80px;
     }
   }
 
