@@ -48,7 +48,28 @@ Photo Gallery is a simple app that shows the photographies requested from the AP
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+
+<!-- > Describe between 1-3 key features of the application.-->
+- [ ] **[Receiving photograpies from API https://picsum.photos and render them in our app]**
+- [ ] **[Pop up window when you press button "Comments" ]**
+- [ ] **[Pop up window that renders all the info of the photographie and the comments and a form to add you comment!]**
+- [ ] **[Sending the comments to the API: https://us-central1-involvement-api.cloudfunctions.net/ to be able to display them in the modal]**
+- [ ] **[Add likes when you press the heart like button]**
+- [ ] **[Likes are sent to the API https://us-central1-involvement-api.cloudfunctions.net/ and then we receive them in our counter likes]**
+- [ ]  **[Counter of the items displayed at the top of the home page]**
+- [ ]   **[Counter of items function tested with jest]**
+- [ ]    **[Counter of the comments in each modal]**
+- [ ]    **[Counter of comments function tested with jest]**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🚀 Live Demo <a name="live-demo"></a>
+
 To see the demo version, you can <a href="https://hienphan0111.github.io/leaderboard/dist"> Click here </a>
 
 <!-- GETTING STARTED -->
