@@ -57,65 +57,64 @@ To see the demo version, you can <a href="https://hienphan0111.github.io/leaderb
 
 To get a local copy up and running, follow these steps.
 
+
 ### Prerequisites
 
-- IDE(code editor) like: **Vscode**, **Sublime**, etc. 
-- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+In order to run this project you need:
+
+- [ ] A PC running any operating system like Windows, Linux, or MacOS
+- [ ] An Internet connection
+- [ ] Git installed
+- [ ] Webpack installed
+- [ ] Knowledge of some basic Git commands
 
 ### Setup
 
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/hienphan/Leaderboard.git
+git clone https://github.com/hienphan0111/JS-capstone-project.git
 ```
 3. To access cloned directory run:
 ```bash
-cd MyPortfolio
+cd JS.capstone-project
 ```
 3. Open it with the live server
 
 ### Install
-
-> To install linters and other project's dependencies run:
-```bash
+```
 npm install
 ```
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-The project was deployed which you can access this link: https://hienphan0111.github.io/Leaderboard/dist
-
-<!--
-Example:
-
-```sh
+Start the server
 
 ```
- -->
+npm run start
+```
+
+### Run tests <a name="run-tests"></a>
+
+To run Stylelint and ESLint tests, run the following commands respectively:
+
+```
+npx stylelint "**/*.{css,scss}"
+```
+
+```
+npx eslint .
+```
+
+### Deployment <a name="deployment"></a>
+
+To deploy this project run
+
+```
+npm run deploy
+```
+
+- GitHub Pages was used to deploy this website
+- For more information about publishing sources, see "[About github page](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites)"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +122,14 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-1. Hien Phan
+
+👤 **Andrea Rivas**
+
+- GitHub: [@rivasbolinga](https://github.com/rivasbolinga)
+- Twitter: [@AndreaRivasPal](https://twitter.com/AndreaRivasPal)
+
+👤 **Hien Phan**
+
 - GitHub: [@hienphan0111](https://github.com/hienphan0111)
 - Twitter: [@hienphan0111](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
@@ -134,36 +140,41 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Display board**
-- [ ] **Add your score**
+- [ ] **Improve design**
+- [ ] **Making the navbar work with more sections**
+- [ ] **Display more photographies and the option to pass to next pages.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
-## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse
+
+I would like to thank - [ Microverse]
+ **![](https://img.shields.io/badge/Microverse-blueviolet)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+<!-- SUPPORT -->
+## ⭐️ Show your support <a name="support"></a>
+
+<!-- > Write a message to encourage readers to support your project -->
+HAppy to have you here! If you like this project please Give us a ⭐️ !
+Thank you so much!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
-And also is <a href="https://creativecommons.org/licenses/">Creative Commons License </a>
+This project is [MIT](https://github.com/rivasbolinga/AwesomeBooks-library/blob/master/MIT.md) licensed.
+
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
