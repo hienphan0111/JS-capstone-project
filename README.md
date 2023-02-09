@@ -2,10 +2,10 @@
 
 <div align="center">
 
-  <img src="JS-capstone-project-logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
+# PHOTO GALLERY <a name="about-project"></a>
 
-  <h3><b>Image collection</b></h3>
+![all-devices-black](https://user-images.githubusercontent.com/103900838/217809772-f79b7c14-4266-4126-9529-ba4d90201fe8.png)
+
 
 </div>
 
