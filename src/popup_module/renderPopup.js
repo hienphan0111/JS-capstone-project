@@ -100,7 +100,7 @@ const renderPopup = async (id) => {
             <small></small>
           </div>
           <div class="field">
-            <textarea id="cm-${id}" class="i-cm" placeholder="Your comment" rows="5" cols="40" required></textarea>
+            <textarea id="cm-${id}" class="i-cm" placeholder="Your comment" rows="5" cols="40" maxlength="200" required></textarea>
             <small></small>
           </div>
           <div class="field">
