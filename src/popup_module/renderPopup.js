@@ -25,18 +25,13 @@ const showMessage = (input, message, type) => {
   return type;
 };
 
-const showError = (input, message) => {
-  return showMessage(input, message, false);
-};
+const showError = (input, message) => showMessage(input, message, false);
 
-const showSuccess = (input) => {
-  return showMessage(input, '', true);
-};
+const showSuccess = (input) => showMessage(input, '', true);
 
-//Check input valid
+// Check input valid
 
 const hasValue = (input, message) => {
-  console.log(input);
   if (input.value.trim() === '') {
     return showError(input, message);
   }
@@ -50,15 +45,14 @@ function addComment(id) {
 
   const NAME_REQUIRED = 'Please enter your name';
   const COMMENT_REQUIRED = 'Plese enter your comment';
-  console.log(commentForm);
+
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btnComment = document.getElementById(`btn-${id}`);
     const username = document.getElementById(`name-${id}`);
     const comment = document.getElementById(`cm-${id}`);
-    let nameValid = hasValue(username, NAME_REQUIRED);
-    let commentValid = hasValue(comment, COMMENT_REQUIRED);
-    if(nameValid && commentValid) {
+    const nameValid = hasValue(username, NAME_REQUIRED);
+    const commentValid = hasValue(comment, COMMENT_REQUIRED);
+    if (nameValid && commentValid) {
       const item = {
         item_id: id,
         username: username.value,
