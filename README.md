@@ -36,7 +36,7 @@
 
 # 📖 [PHOTO GALLERY] <a name="about-project"></a>
 
-Photo Gallery is a simple app that shows the photographies requested from the API https://picsum.photos. This project is the finall Capstone Project from The JavaScript module from Microverse program's curriculum and has being done as a group Project by Andrea Rivas and Hien Phan.
+Photo Gallery is a simple app that shows the photographs requested from the API https://picsum.photos. This project is the final Capstone Project of The JavaScript module from Microverse program's curriculum and has been done as a group Project by Andrea Rivas and Hien Phan.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,19 +52,16 @@ Photo Gallery is a simple app that shows the photographies requested from the AP
 
 ### Key Features <a name="key-features"></a>
 
-
-<!-- > Describe between 1-3 key features of the application.-->
-- [ ] **[Receiving photograpies from API https://picsum.photos and render them in our app]**
+- [ ] **[Receiving photographs from API https://picsum.photos and render them in our app]**
 - [ ] **[Pop up window when you press button "Comments" ]**
-- [ ] **[Pop up window that renders all the info of the photographie and the comments and a form to add you comment!]**
+- [ ] **[Pop up window that renders all the info of the photography and the comments and a form to add your comment!]**
 - [ ] **[Sending the comments to the API: https://us-central1-involvement-api.cloudfunctions.net/ to be able to display them in the modal]**
 - [ ] **[Add likes when you press the heart like button]**
-- [ ] **[Likes are sent to the API https://us-central1-involvement-api.cloudfunctions.net/ and then we receive them in our counter likes]**
+- [ ] **[Likes are sent to the API https://us-central1-involvement-api.cloudfunctions.net/, and then we receive them in our counter likes]**
 - [ ]  **[Counter of the items displayed at the top of the home page]**
 - [ ]   **[Counter of items function tested with jest]**
 - [ ]    **[Counter of the comments in each modal]**
 - [ ]    **[Counter of comments function tested with jest]**
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +160,7 @@ npm run deploy
 
 - [ ] **Improve design**
 - [ ] **Making the navbar work with more sections**
-- [ ] **Display more photographies and the option to pass to next pages.**
+- [ ] **Display more photos and the option to pass to the next pages.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
