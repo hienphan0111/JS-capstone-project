@@ -121,3 +121,7 @@
   color: rgba(6, 3, 82, 0.831);
   transform: scale(1.1, 1.1);
 }
+
+.field {
+  margin-bottom: 10px;
+}

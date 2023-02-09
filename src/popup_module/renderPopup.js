@@ -2,6 +2,8 @@ import getImageData from './utils.js';
 import './popStyle.css';
 import { getComments, postComment } from './apiComment.js';
 
+/* Update all comments which get from API on popup window */
+
 const updateComment = async (id) => {
   const comments = await getComments(id);
   const commentHeader = document.getElementById(`cm-h-${id}`);
@@ -11,6 +13,8 @@ const updateComment = async (id) => {
   comments.forEach((comment) => {
     const li = document.createElement('li');
     li.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+
+    li.className = 'comment-item';
     listCom.append(li);
   });
 };
@@ -31,6 +35,57 @@ function addComment(id) {
     updateComment(id);
   });
 }
+
+// Show a message with a type of input
+
+const showMessage = (input, message, type) => {
+  const msg = input.parentNode.querySelector('small');
+  msg.innerText = message;
+  return type;
+};
+
+const showError = (input, message) => showMessage(input, message, false);
+
+const showSuccess = (input) => showMessage(input, '', true);
+
+// Check input valid
+
+const hasValue = (input, message) => {
+  const regExp = /^[\w\s]+$/;
+  if (!regExp.test(input.value.trim())) {
+    return showError(input, message);
+  }
+  return showSuccess(input);
+};
+
+/* Add new comment which User input and push it to the API */
+
+function addComment(id) {
+  const commentForm = document.querySelector('.comment-form');
+
+  const NAME_REQUIRED = 'Please enter your name';
+  const COMMENT_REQUIRED = 'Plese enter your comment';
+
+  commentForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = document.getElementById(`name-${id}`);
+    const comment = document.getElementById(`cm-${id}`);
+    const nameValid = hasValue(username, NAME_REQUIRED);
+    const commentValid = hasValue(comment, COMMENT_REQUIRED);
+    if (nameValid && commentValid) {
+      const item = {
+        item_id: id,
+        username: username.value,
+        comment: comment.value,
+      };
+      await postComment(item);
+      updateComment(id);
+    }
+    e.target.reset();
+  });
+}
+
+/* Render Popup that include image element, comment and form */
 
 const renderPopup = async (id) => {
   const image = await getImageData(id);
@@ -63,6 +118,17 @@ const renderPopup = async (id) => {
           <input type="text" id="name-${id}" class="i-cm" placeholder="Your name" size="30" required>
           <textarea id="cm-${id}" class="i-cm" placeholder="Your comment" rows="5" cols="40" required></textarea>
           <button id="btn-${id}" class="btn-cm">Comment</button> 
+          <div class="field">
+            <input type="text" id="name-${id}" class="i-cm" placeholder="Your name" maxlength="20" size="30" required>
+            <small></small>
+          </div>
+          <div class="field">
+            <textarea id="cm-${id}" class="i-cm" placeholder="Your comment" rows="5" cols="40" maxlength="200" required></textarea>
+            <small></small>
+          </div>
+          <div class="field">
+            <button type="submit" id="btn-${id}" class="btn-cm">Comment</button>
+          </div>
         </form>
       </div>
     </div>
