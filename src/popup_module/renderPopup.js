@@ -18,24 +18,6 @@ const updateComment = async (id) => {
     listCom.append(li);
   });
 };
-
-function addComment(id) {
-  const btnComment = document.getElementById(`btn-${id}`);
-  const username = document.getElementById(`name-${id}`);
-  const comment = document.getElementById(`cm-${id}`);
-
-  btnComment.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const item = {
-      item_id: id,
-      username: username.value,
-      comment: comment.value,
-    };
-    await postComment(item);
-    updateComment(id);
-  });
-}
-
 // Show a message with a type of input
 
 const showMessage = (input, message, type) => {
@@ -115,9 +97,6 @@ const renderPopup = async (id) => {
       <div class="comment-form">
         <h3>Add comment</h3>
         <form class="f-comment">
-          <input type="text" id="name-${id}" class="i-cm" placeholder="Your name" size="30" required>
-          <textarea id="cm-${id}" class="i-cm" placeholder="Your comment" rows="5" cols="40" required></textarea>
-          <button id="btn-${id}" class="btn-cm">Comment</button> 
           <div class="field">
             <input type="text" id="name-${id}" class="i-cm" placeholder="Your name" maxlength="20" size="30" required>
             <small></small>
