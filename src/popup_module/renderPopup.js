@@ -2,7 +2,6 @@ import getImageData from './utils.js';
 import './popStyle.css';
 import { getComments, postComment } from './apiComment.js';
 
-
 /* Update all comments which get from API on popup window */
 
 const updateComment = async (id) => {
@@ -14,7 +13,7 @@ const updateComment = async (id) => {
   comments.forEach((comment) => {
     const li = document.createElement('li');
     li.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-    li.className = "comment-item";
+    li.className = 'comment-item';
     listCom.append(li);
   });
 };
@@ -34,10 +33,10 @@ const showSuccess = (input) => showMessage(input, '', true);
 // Check input valid
 
 const hasValue = (input, message) => {
-  const regExp = /^[\w\s]+$/; 
-  if (!regExp.test(input.value.trim())) { 
-    return showError(input, message); 
-  } 
+  const regExp = /^[\w\s]+$/;
+  if (!regExp.test(input.value.trim())) {
+    return showError(input, message);
+  }
   return showSuccess(input);
 };
 
