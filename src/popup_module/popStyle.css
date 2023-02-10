@@ -19,36 +19,37 @@
 
 .img-pop {
   background-color: #fff;
-  margin: 50px auto;
-  padding: 40px;
+  margin: 0;
+  padding: 0;
   position: fixed;
   left: 0;
   right: 0;
-  width: 90%;
-  max-width: 1024px;
+  width: 100%;
   overflow-y: scroll;
-  height: 70%;
+  height: 100%;
   z-index: 5;
+  border-radius: 30px;
+  background: radial-gradient(circle at 10% 20%, rgb(255, 246, 236) 59.5%, rgba(100, 46, 122, 0.23) 100.2%);
 }
 
 .pop-in {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #c01414;
+
 }
 
 .close {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   position: absolute;
-  right: 60px;
-  top: 60px;
+  right: 10px;
+  top: 10px;
   z-index: 7;
 }
 
 .img > img {
-  max-width: 480px;
+  width: 260px;
   margin: 10px;
 }
 
@@ -72,10 +73,15 @@
   flex-direction: column;
   align-items: center;
   list-style: none;
+  width: 280px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: auto;
 }
 
 .list-comment {
   list-style: none;
+  width: 280px;
 }
 
 .list-comment > li {
@@ -109,7 +115,7 @@
   font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
   border-radius: 5px;
-  background-color: #04374ac5;
+  background-color: brown;
   color: #fff;
   border: none;
   transition: 1s;
@@ -125,3 +131,38 @@
 .field {
   margin-bottom: 10px;
 }
+
+input,
+textarea {
+  background-color: rgba(255, 255, 255, 0.697);
+  border: 0.5px solid brown;
+  border-radius: 10px;
+  width: 280px;
+}
+form {
+  width: 280px;
+}
+
+@media only screen and (min-width: 700px) {
+  
+.img-pop {
+  background-color: #fff;
+  margin: 10px;
+  padding: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 85%;
+  max-width: 1024px;
+  overflow-y: scroll;
+  height: 70%;
+  z-index: 5;
+  border-radius: 30px;
+  background: radial-gradient(circle at 10% 20%, rgb(255, 246, 236) 59.5%, rgba(100, 46, 122, 0.23) 100.2%);
+}
+.img > img {
+  width: 600px;
+  margin: 10px;
+}
+}
+

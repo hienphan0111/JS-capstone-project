@@ -19,7 +19,6 @@ const displayPhotos = async () => {
       likesCounter = item.likes;
     }
     cards.innerHTML += `<div class="photo-card">
-   <p id="${photos[i].id}">${photos[i].id}</p>
    <div class="img-container">
      <img class="photo" src="${photos[i].download_url}" alt="photo">
    </div>
