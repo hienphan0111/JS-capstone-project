@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest --coverage",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack --mode=development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
