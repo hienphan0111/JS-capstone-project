@@ -73,7 +73,7 @@ To see the demo version, you can a https://hienphan0111.github.io/JS-capstone-pr
 
 Here we explain you our project!
 
-https://drive.google.com/drive/u/0/my-drive
+https://drive.google.com/file/d/1M_C1MTr86qxF2wS3QZc8wYBOwot-4FcU/view?usp=sharing
 
 <!-- GETTING STARTED -->
 
