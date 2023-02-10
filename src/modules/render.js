@@ -33,7 +33,8 @@ const displayPhotos = async () => {
      </div>
    </div>
    <div class="buttons">
-     <button class="card-btn comments-btn">Comments</button>
+     <button class="card-btn comments-btn">Comments
+     <i class="fa-regular fa-comment-dots"></i></button>
    </div>
  </div>`;
   }

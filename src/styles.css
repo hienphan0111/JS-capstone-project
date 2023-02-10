@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Handlee&display=swap');
+
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid #000;
+  justify-content: end;
   font-family: 'Dancing Script', cursive;
+  background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
+  font-family: 'Work Sans', sans-serif;
 }
 
 nav > ul {
   display: flex;
   list-style: none;
+  
 }
 
 .i-menu {
@@ -20,20 +23,19 @@ nav > ul {
 .i-menu > a {
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
-  color: rgb(151, 7, 132);
+  font-size: 20px;
+  color: white;
   transition: 0.5s;
 }
 
 .i-menu > a:hover {
   transform: scale(1.1, 1.1);
-  color: rgb(6, 138, 138);
+  color:black;
 }
 
 footer {
   margin: 50px auto;
   padding: 20px;
-  border-top: 1px solid #000;
   bottom: 5px;
   font-family: 'Dancing Script', cursive;
 }
@@ -43,6 +45,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  width: 60px;
 }
 
 body {
@@ -57,15 +63,21 @@ body {
   font-size: 50px;
 }
 
+.main-menu {
+  display: flex;
+  flex-direction: row;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  
 }
 
 .photo-card {
   margin-top: 100px;
-  background: radial-gradient(666px at 0.4% 48%, rgba(202, 204, 227, 0.92) 0%, rgba(89, 89, 99, 0.777) 97.5%);
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
   color: white;
   border-radius: 10px;
   width: 300px;
@@ -81,10 +93,11 @@ body {
   height: 200px;
   cursor: pointer;
   border-radius: 10px;
+  
 }
 
 .photo:hover {
-  filter: grayscale(80%);
+  filter: grayscale(100%);
   border: 1px solid white;
 }
 
@@ -107,7 +120,7 @@ body {
 }
 
 .like-btn:hover {
-  color: rgba(130, 22, 22, 0.744);
+  color: rgba(194, 37, 37, 0.818);
 }
 
 .likes-container {
@@ -132,21 +145,22 @@ body {
 }
 
 .comments-btn {
-  font-family: 'Work Sans', sans-serif;
+  
   width: 200px;
   height: 30px;
   font-size: 20px;
   cursor: pointer;
-  background-color: antiquewhite;
-  color: grey;
+  background:none; 
+  color: bisque;
   border: none;
   border-radius: 3px;
+  border: 2px solid bisque;
 }
 
 .comments-btn:hover {
-  background: none;
-  color: bisque;
   border: 1px solid bisque;
+  color: rgb(3, 3, 43);
+  background-color: bisque;
 }
 
 .reserve-btn {
@@ -215,6 +229,10 @@ body {
     width: 280px;
   }
 
+  .photo-author {
+    font-size: 18px;
+  }
+
   .img-footer {
     font-size: 20px;
   }
@@ -223,15 +241,15 @@ body {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: repeat(15, 1fr);
-      gap: 10px;
+      gap: 30px;
     }
 
     .photo-card {
-      width: 300px;
+      width: 360px;
     }
 
     .photo {
-      width: 280px;
+      width: 320px;
     }
 
     .photo-author {
@@ -250,11 +268,11 @@ body {
     }
 
     .photo-card {
-      width: 340px;
+      width: 400px;
     }
 
     .photo {
-      width: 300px;
+      width: 340px;
     }
 
     .photo-author {
